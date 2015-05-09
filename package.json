@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "mv node_modules vendor;"
+    "preinstall": "rm -rf vendor node_modules",
+    "postinstall": "mv node_modules vendor && ln -s vendor node_modules"
   },
   "author": "",
   "license": "MIT",
